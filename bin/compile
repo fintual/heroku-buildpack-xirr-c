@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir> <env-dir>
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+ROOT_DIR=$(dirname $0)/../
+BUILD_DIR=${1:-}
+
+gcc $ROOT_DIR/xirr.c -o $BUILD_DIR/.profile.d/xirr
