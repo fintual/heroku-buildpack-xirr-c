@@ -9,5 +9,7 @@ ROOT_DIR=$(dirname $0)/../
 BUILD_DIR=${1:-}
 BIN_DIR=$BUILD_DIR/.apt/usr/bin
 
+mkdir -p $BIN_DIR
+
 gcc $ROOT_DIR/xirr.c -o $BIN_DIR/xirr
 chmod +x $BIN_DIR/xirr
