@@ -7,5 +7,7 @@ set -o nounset
 
 ROOT_DIR=$(dirname $0)/../
 BUILD_DIR=${1:-}
+BIN_DIR=$BUILD_DIR/.apt/usr/bin
 
-gcc $ROOT_DIR/xirr.c -o $BUILD_DIR/.profile.d/xirr
+gcc $ROOT_DIR/xirr.c -o $BIN_DIR/xirr
+chmod +x $BIN_DIR/xirr
