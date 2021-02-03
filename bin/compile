@@ -11,5 +11,5 @@ BIN_DIR=$BUILD_DIR/.apt/usr/bin
 
 mkdir -p $BIN_DIR
 
-gcc $ROOT_DIR/xirr.c -o $BIN_DIR/xirr
+gcc $ROOT_DIR/xirr.c -o $BIN_DIR/xirr -lm
 chmod +x $BIN_DIR/xirr
