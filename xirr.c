@@ -5,11 +5,9 @@
 int main(int argc, char const *argv[])
 {
   if (argc == 4) {
-    char *ptr;
-
-    double rate = strtod(argv[1], &ptr);
-    double amount = strtod(argv[2], &ptr);
-    double period = strtod(argv[3], &ptr);
+    double rate = strtod(argv[1], NULL);
+    double amount = strtod(argv[2], NULL);
+    double period = strtod(argv[3], NULL);
 
     double ret = amount / pow(1 + rate, period);
     printf("%lf", ret);
